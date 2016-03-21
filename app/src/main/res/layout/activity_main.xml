@@ -14,7 +14,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="quantity"
         android:textAllCaps="true"/>
 
@@ -28,9 +27,11 @@
         android:textSize="16sp"/>
 
     <Button
+        android:onClick="submitOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Order"
+
         />
 </LinearLayout>
