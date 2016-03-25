@@ -10,6 +10,8 @@ import java.text.NumberFormat;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends ActionBarActivity {
+    int numberOfCofees = 2;
+    int quantity = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +31,8 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(77*2+1);
-        displayPrice(4);
+        display(numberOfCofees);
+        displayPrice(numberOfCofees * quantity);
     }
 
     /**
