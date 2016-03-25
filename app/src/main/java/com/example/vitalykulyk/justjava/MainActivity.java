@@ -36,6 +36,25 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
+     * This method increments number of cuos of cofee
+     */
+    public void incrementOrder(View view){
+        numberOfCofees++;
+        display(numberOfCofees);
+        displayPrice(numberOfCofees * quantity);
+    }
+
+
+    /**
+     * This method decrements number of cuos of cofee
+     */
+    public void decrementOrder(View view){
+        numberOfCofees--;
+        display(numberOfCofees);
+        displayPrice(numberOfCofees * quantity);
+    }
+
+    /**
      * This method displays the given quantity value on the screen.
      */
     private void display(int number) {
