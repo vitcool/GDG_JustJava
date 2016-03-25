@@ -31,8 +31,9 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(numberOfCofees);
-        displayPrice(numberOfCofees * quantity);
+        String priceMessage = "Total $" + (numberOfCofees*quantity) + "\nThank you!";
+        displayMessage(priceMessage);
+        //displayPrice(numberOfCofees * quantity);
     }
 
     /**
@@ -41,7 +42,6 @@ public class MainActivity extends ActionBarActivity {
     public void incrementOrder(View view){
         numberOfCofees++;
         display(numberOfCofees);
-        displayPrice(numberOfCofees * quantity);
     }
 
 
@@ -51,7 +51,6 @@ public class MainActivity extends ActionBarActivity {
     public void decrementOrder(View view){
         numberOfCofees--;
         display(numberOfCofees);
-        displayPrice(numberOfCofees * quantity);
     }
 
     /**
@@ -61,5 +60,13 @@ public class MainActivity extends ActionBarActivity {
         TextView quantityTextView = (TextView) findViewById(
                 R.id.quantity_text_view);
         quantityTextView.setText("" + number);
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
